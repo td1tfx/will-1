@@ -1,0 +1,9 @@
+
+Mnist dataset contains four files:
+
+-a----        1998/1/26     23:07        7840016 t10k-images.idx3-ubyte
+-a----        1998/1/26     23:07          10008 t10k-labels.idx1-ubyte
+-a----       1996/11/18     23:36       47040016 train-images.idx3-ubyte
+-a----       1996/11/18     23:36          60008 train-labels.idx1-ubyte
+
+Make sure the file names are all right.

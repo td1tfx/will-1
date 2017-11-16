@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{90a7b465-28b4-4b3e-8b54-a57d71d3d271}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="others">
+      <UniqueIdentifier>{858ff5f1-e19f-4412-a57e-20e9aaa09a83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="layer">
+      <UniqueIdentifier>{6625ebba-819f-41bf-8501-72e44f10b3a5}</UniqueIdentifier>
+      <Extensions>Layer*.*</Extensions>
+    </Filter>
+    <Filter Include="data">
+      <UniqueIdentifier>{2a3933f8-115f-45e7-834d-0367a65f965c}</UniqueIdentifier>
+      <Extensions>Data*.*</Extensions>
+    </Filter>
+    <Filter Include="matrix">
+      <UniqueIdentifier>{7d95de28-1607-45df-8a8e-d11c06a3cadf}</UniqueIdentifier>
+      <Extensions>Matrix*.*</Extensions>
+    </Filter>
+    <Filter Include="math">
+      <UniqueIdentifier>{b1000c3a-726a-497c-b4f3-7bde70c0545f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="brain">
+      <UniqueIdentifier>{0b817fea-8808-42c4-8adb-6c357148dd45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="net">
+      <UniqueIdentifier>{3b64f97b-b7f4-4b47-8fe8-199b9b17969a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base">
+      <UniqueIdentifier>{e6a60d5c-664d-4817-bcf1-85ab3ff8dc78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="option">
+      <UniqueIdentifier>{8b6e00fa-12c4-4110-8076-633dc67bf76c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="layer_attach">
+      <UniqueIdentifier>{f9a6bb75-96d2-402a-89c9-76e36f18d77d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\others\libconvert.cpp">
+      <Filter>others</Filter>
+    </ClCompile>
+    <ClCompile Include="src\others\ini.cpp">
+      <Filter>others</Filter>
+    </ClCompile>
+    <ClCompile Include="src\others\INIReader.cpp">
+      <Filter>others</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DataPreparer.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Layer.cpp">
+      <Filter>layer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LayerConvolution.cpp">
+      <Filter>layer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LayerDirect.cpp">
+      <Filter>layer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LayerFullConnect.cpp">
+      <Filter>layer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LayerNone.cpp">
+      <Filter>layer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LayerPooling.cpp">
+      <Filter>layer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Matrix.cpp">
+      <Filter>matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MatrixExtend.cpp">
+      <Filter>matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MatrixFiller.cpp">
+      <Filter>matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cublas_real.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cuda_hack.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CudaToolkit.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MNIST.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Brain.cpp">
+      <Filter>brain</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Net.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Activer.cpp">
+      <Filter>layer_attach</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Color.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Option.cpp">
+      <Filter>option</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DataGroup.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Solver.cpp">
+      <Filter>layer_attach</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DataPreparerImage.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LayerCreator.cpp">
+      <Filter>layer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DataPreparerCreator.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Neural.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\File.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BrainNormal.cpp">
+      <Filter>brain</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BrainPrune.cpp">
+      <Filter>brain</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Modifier.cpp">
+      <Filter>layer_attach</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DataPreparerTxt.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\others\libconvert.h">
+      <Filter>others</Filter>
+    </ClInclude>
+    <ClInclude Include="src\others\ini.h">
+      <Filter>others</Filter>
+    </ClInclude>
+    <ClInclude Include="src\others\INIReader.h">
+      <Filter>others</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataPreparer.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Layer.h">
+      <Filter>layer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LayerConvolution.h">
+      <Filter>layer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LayerDirect.h">
+      <Filter>layer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LayerFullConnect.h">
+      <Filter>layer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LayerNone.h">
+      <Filter>layer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LayerPooling.h">
+      <Filter>layer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Matrix.h">
+      <Filter>matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MatrixExtend.h">
+      <Filter>matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MatrixFiller.h">
+      <Filter>matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="src\blas_types.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cblas_real.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cublas_real.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cuda_hack.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CudaToolkit.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VectorMath.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MNIST.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Brain.h">
+      <Filter>brain</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Net.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Activer.h">
+      <Filter>layer_attach</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Random.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Color.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Timer.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Option.h">
+      <Filter>option</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataGroup.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Solver.h">
+      <Filter>layer_attach</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataPreparerImage.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LayerCreator.h">
+      <Filter>layer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataPreparerCreator.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Neural.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\File.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mythapi.h" />
+    <ClInclude Include="src\BrainNormal.h">
+      <Filter>brain</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BrainPrune.h">
+      <Filter>brain</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Modifier.h">
+      <Filter>layer_attach</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataPreparerTxt.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cblas.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md" />
+  </ItemGroup>
+</Project>

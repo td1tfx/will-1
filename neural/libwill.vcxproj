@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{271C3640-1916-4736-B07F-DABF0F3914DF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>neural</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>lib/include;lib/include/cuda;cuda;$(CUDA_PATH)/include</AdditionalIncludeDirectories>
+      <PreprocessToFile>false</PreprocessToFile>
+      <OpenMPSupport>false</OpenMPSupport>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/source-charset:utf-8 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>./lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>will-cuda.lib;cudart.lib;cublas.lib;cudnn.lib;curand.lib;libopenblas64.dll.a;nvml.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>./lib/x64;$(CUDA_PATH)/lib/x64;$(SolutionDir)$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_NONO_CUDA;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>lib/include;lib/include/cuda;cuda;$(CUDA_PATH)/include</AdditionalIncludeDirectories>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PreprocessToFile>false</PreprocessToFile>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <SDLCheck>false</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/source-charset:utf-8 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>./lib;$(SolutionDir)$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>will-cuda.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>will-cuda.lib;cudart.lib;cublas.lib;cudnn.lib;curand.lib;libopenblas64.dll.a;nvml.lib</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>./lib/x64;$(CUDA_PATH)/lib/x64;$(SolutionDir)$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Activer.cpp" />
+    <ClCompile Include="src\BrainNormal.cpp" />
+    <ClCompile Include="src\BrainPrune.cpp" />
+    <ClCompile Include="src\Color.cpp" />
+    <ClCompile Include="src\cublas_real.cpp" />
+    <ClCompile Include="src\CudaToolkit.cpp" />
+    <ClCompile Include="src\cuda_hack.cpp" />
+    <ClCompile Include="src\DataGroup.cpp" />
+    <ClCompile Include="src\DataPreparerCreator.cpp" />
+    <ClCompile Include="src\DataPreparerImage.cpp" />
+    <ClCompile Include="src\DataPreparerTxt.cpp" />
+    <ClCompile Include="src\File.cpp" />
+    <ClCompile Include="src\DataPreparer.cpp" />
+    <ClCompile Include="src\LayerCreator.cpp" />
+    <ClCompile Include="src\Net.cpp" />
+    <ClCompile Include="src\MatrixFiller.cpp" />
+    <ClCompile Include="src\LayerDirect.cpp" />
+    <ClCompile Include="src\LayerNone.cpp" />
+    <ClCompile Include="src\Matrix.cpp" />
+    <ClCompile Include="src\MatrixExtend.cpp" />
+    <ClCompile Include="src\MNIST.cpp" />
+    <ClCompile Include="src\Option.cpp" />
+    <ClCompile Include="src\others\ini.cpp" />
+    <ClCompile Include="src\others\INIReader.cpp" />
+    <ClCompile Include="src\Layer.cpp" />
+    <ClCompile Include="src\LayerConvolution.cpp" />
+    <ClCompile Include="src\LayerFullConnect.cpp" />
+    <ClCompile Include="src\LayerPooling.cpp" />
+    <ClCompile Include="src\Brain.cpp" />
+    <ClCompile Include="src\Neural.cpp" />
+    <ClCompile Include="src\others\libconvert.cpp" />
+    <ClCompile Include="src\Solver.cpp" />
+    <ClCompile Include="src\Modifier.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lib\include\cblas.h" />
+    <ClInclude Include="src\Activer.h" />
+    <ClInclude Include="src\blas_types.h" />
+    <ClInclude Include="src\BrainNormal.h" />
+    <ClInclude Include="src\BrainPrune.h" />
+    <ClInclude Include="src\cblas_real.h" />
+    <ClInclude Include="src\Color.h" />
+    <ClInclude Include="src\cublas_real.h" />
+    <ClInclude Include="src\cuda_hack.h" />
+    <ClInclude Include="src\DataGroup.h" />
+    <ClInclude Include="src\DataPreparerCreator.h" />
+    <ClInclude Include="src\DataPreparerImage.h" />
+    <ClInclude Include="src\DataPreparerTxt.h" />
+    <ClInclude Include="src\File.h" />
+    <ClInclude Include="src\DataPreparer.h" />
+    <ClInclude Include="src\LayerCreator.h" />
+    <ClInclude Include="src\mythapi.h" />
+    <ClInclude Include="src\Net.h" />
+    <ClInclude Include="src\MatrixFiller.h" />
+    <ClInclude Include="src\LayerDirect.h" />
+    <ClInclude Include="src\LayerNone.h" />
+    <ClInclude Include="src\Matrix.h" />
+    <ClInclude Include="src\CudaToolkit.h" />
+    <ClInclude Include="src\MatrixExtend.h" />
+    <ClInclude Include="src\MNIST.h" />
+    <ClInclude Include="src\Neural.h" />
+    <ClInclude Include="src\others\ini.h" />
+    <ClInclude Include="src\others\INIReader.h" />
+    <ClInclude Include="src\others\libconvert.h" />
+    <ClInclude Include="src\Solver.h" />
+    <ClInclude Include="src\Modifier.h" />
+    <ClInclude Include="src\Timer.h" />
+    <ClInclude Include="src\VectorMath.h" />
+    <ClInclude Include="src\Layer.h" />
+    <ClInclude Include="src\LayerConvolution.h" />
+    <ClInclude Include="src\LayerFullConnect.h" />
+    <ClInclude Include="src\LayerPooling.h" />
+    <ClInclude Include="src\Brain.h" />
+    <ClInclude Include="src\Option.h" />
+    <ClInclude Include="src\Random.h" />
+    <ClInclude Include="src\types.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
